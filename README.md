@@ -1,5 +1,5 @@
 # Mira-Search-Module
-The main goal here is to provide a fast, explainable, debuggable, semantic-based search engine for finding resources based on users' needs.
+The main goal here is to provide a **fast, explainable, debuggable, semantic-based** search engine for finding resources based on users' needs.
 
 # Input
 Users' intents will be recognized by the chatbot core module and the recognized intents will be given to the Mira search module as an input (e.g. Edmonton, depression).
