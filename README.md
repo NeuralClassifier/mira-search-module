@@ -9,10 +9,10 @@ The output will be the top 10 resources sorted by relevance to the input.
 
 # Process
 1) Translating or transforming input keywords into tags of resources. It is worth mentioning that our resources are tagged and stored in the Database. (e.g. input:need_doctor -> tags: doctor, psychologist, consultant)
-2) Sometimes the keyword used is equal to one of the tags we have in the database. if not we will try to map each keyword at least to one tag. This will be done using three methods:
-1.1) Direct mapping: using a lookup table we map a keyword to the synonyms in the tags (using our ontology)
-1.2) Edit-distance mapping: edit distance will be used as a similarity measure to find similar tags (e.g. input: Alberta -> tag: Alberta-wide) this can also help tolerate user's spelling errors (e.g. input: red dear -> tag: red deer) 
-1.3) Using Bert-based transformer and cosine similarity: all-MiniLM-L6-v2 model is used in order to vectorize the input and find the most semantically similar tag to it. Loading the model and transforming the user's input is timely on a limited server so we use this method only when previous methods did not find any tag for a single keyword.
+2) Sometimes the keyword used is equal to one of the tags we have in the database. if not we will try to map each keyword at least to one tag. This will be done using three methods:<br />
+1.1) Direct mapping: using a lookup table we map a keyword to the synonyms in the tags (using our ontology)<br />
+1.2) Edit-distance mapping: edit distance will be used as a similarity measure to find similar tags (e.g. input: Alberta -> tag: Alberta-wide) this can also help tolerate user's spelling errors (e.g. input: red dear -> tag: red deer) <br />
+1.3) Using Bert-based transformer and cosine similarity: all-MiniLM-L6-v2 model is used in order to vectorize the input and find the most semantically similar tag to it. Loading the model and transforming the user's input is timely on a limited server so we use this method only when previous methods did not find any tag for a single keyword.<br />
 
 3) Having keywords mapped to the predefined resource tags, we again use our ontology to relax the query (e.g. detected tag: Edmonton, relaxed tag: Alberta, Canada, worldwide)
 
