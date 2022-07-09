@@ -25,3 +25,8 @@ In this phase, we also have some rules that can manipulate scores. for example, 
 
 # Ontology
 you can find the ontology in the ontology folder it classified the tags of the portal in an excel sheet.
+
+# Contributors
+
+* Mohamad Ali Gharaat, [gharaat@ualberta.ca](mailto:gharaat@ualberta.ca)
+* Kushankur Ghosh, [kushanku@ualberta.ca](mailto:kushanku@ualberta.ca)
